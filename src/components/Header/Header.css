@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Muli);
 
+.header {
+    padding-left: 0px !important;
+}
+
 .header li {
     display: inline-block;
     list-style: outside none none;
@@ -16,7 +20,7 @@
     transition: all 0.35s ease;
     height: 2px;
     width: 35%;
-    background-color: orange;
+    background-color: darkorange;
     position: absolute;
     content: '';
     opacity: 0;
@@ -44,19 +48,51 @@
     right: 65%;
 }
 
-.header li{
-    max-width: 100px;
+.header button:focus {
+    outline-color: darkorange;
 }
 
-.collapsed {
-
+.header-contact ul{
+    padding-left: 0px;
 }
 
+.header-contact li{
+    list-style: none;
+}
 
+.logo {
+    width: 200px;
+    height: 120px;
+}
 
-/* Demo purposes only */
-/*
+.mail {
+    color: gray;
+}
+
+.mail:hover {
+    color: darkgray;
+    text-decoration: none;
+}
+
 body {
-    padding: 50px 0;
     text-align: center;
-}*/
+}
+
+/*Navbar collapse*/
+
+@media only screen and (max-width: 768px) {
+    .header li {
+        display: inline-block;
+        list-style: outside none none;
+        position: relative;
+        margin: 10px;
+        max-width: 80px;
+    }
+
+    .header li:before,
+    .header li:after {
+        background-color: darkorange;
+    }
+}
+
+
