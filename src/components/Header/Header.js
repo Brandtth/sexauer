@@ -1,13 +1,71 @@
 import React, { Component } from 'react';
-import { Media } from 'reactstrap';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
 import './Header.css';
 
 class Header extends Component {
+  constructor (props){
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+
+
   render() {
+
+
+
     return (
       <div>
+        <Navbar light expand="md" className="header">
+          <NavbarBrand href="/" className="mr-auto">Sexauer</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} className="mr-2" />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/" data-hover="Home">Home</NavLink>
+              </NavItem>
 
-          <Media object data-src="holder.js/64x64" alt="Generic placeholder image" />
+              <NavItem>
+                <NavLink href="/about" data-hover="About Us"> About Us </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink href="/contact" data-hover="Contact"> Contact </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink href="/references" data-hover="References"> References </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink href="/services" data-hover="Services"> Services </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+
+      /*<div>
 
           <h2>Fliesen und Naturstein</h2>
           <h1>Sexauer</h1>
@@ -21,7 +79,7 @@ class Header extends Component {
           <li><a href="/services" data-hover="Services"> Services </a></li>
         </ul>
 
-      </div>
+      </div>*/
     );
   }
 }

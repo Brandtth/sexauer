@@ -1,18 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Muli);
-.header {
-    font-family: 'Muli', Arial, sans-serif;
-    font-size: 18px;
-    letter-spacing: 1.5px;
-    line-height: 1em;
-    margin: 15px 40px;
-    text-transform: uppercase;
-}
+
 .header li {
     display: inline-block;
     list-style: outside none none;
-    margin: 0.5em 0.6em;
-    padding: 12px 15px;
     position: relative;
+    margin: 10px;
 }
 .header li a {
     color: black;
@@ -51,8 +43,20 @@
 .header li.hover:after {
     right: 65%;
 }
+
+.header li{
+    max-width: 100px;
+}
+
+.collapsed {
+
+}
+
+
+
 /* Demo purposes only */
+/*
 body {
     padding: 50px 0;
     text-align: center;
-}
+}*/
