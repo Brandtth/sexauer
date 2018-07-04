@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+.header {
+    font-family: 'Muli', Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 1em;
+    margin: 15px 40px;
+    text-transform: uppercase;
+}
+.header li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0.5em 0.6em;
+    padding: 12px 15px;
+    position: relative;
+}
+.header li a {
+    color: black;
+    text-decoration: none;
+}
+.header li:before,
+.header li:after {
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    height: 2px;
+    width: 35%;
+    background-color: orange;
+    position: absolute;
+    content: '';
+    opacity: 0;
+}
+.header li:before {
+    top: 0;
+    left: 0;
+}
+.header li:after {
+    bottom: 0;
+    right: 0;
+}
+.header li:hover:before,
+.header li.hover:before,
+.header li:hover:after,
+.header li.hover:after {
+    opacity: 1;
+}
+.header li:hover:before,
+.header li.hover:before {
+    left: 65%;
+}
+.header li:hover:after,
+.header li.hover:after {
+    right: 65%;
+}
+/* Demo purposes only */
+body {
+    padding: 50px 0;
+    text-align: center;
+}
