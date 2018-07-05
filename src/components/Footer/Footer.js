@@ -10,7 +10,7 @@ class Footer extends Component {
 
           <Row className="footer">
 
-              <Col xs="12" sm="3">
+              <Col xs="12" sm="12" md="3">
                   <h4>Information</h4>
                   <ul>
                       <li>Impressum</li>
@@ -18,7 +18,7 @@ class Footer extends Component {
                   </ul>
               </Col>
 
-              <Col xs="12" sm="3">
+              <Col xs="12" sm="12" md="3">
                   <h4>Follow Us</h4>
                   <ul>
                       <li>Facebook</li>
@@ -26,7 +26,7 @@ class Footer extends Component {
                   </ul>
               </Col>
 
-            <Col xs="12" sm="3">
+            <Col xs="12" sm="12" md="3">
                   <h4>Rufen Sie uns jetzt an</h4>
                   <ul>
                       <li>(07667)987654321</li>
@@ -34,7 +34,7 @@ class Footer extends Component {
                   </ul>
               </Col>
 
-              <Col xs="12" sm="3">
+              <Col xs="12" sm="12" md="3">
                   <h4>Mail-Adresse</h4>
                   <ul>
                       <li>info@Fliesen-Sexauer.de</li>
