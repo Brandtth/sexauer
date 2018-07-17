@@ -1,25 +1,45 @@
 import React, { Component } from 'react';
-import { UncontrolledCarousel } from 'reactstrap';
+import { UncontrolledCarousel, Col, Row, Media } from 'reactstrap';
+
+
+import bathroom from "../../images/bathroom.jpeg";
+import bathroomTwo from "../../images/bathroomTwo.jpg";
+import kitchen from "../../images/kitchen.jpg";
+import balcony from "../../images/balcony.jpg";
+
+import realization from "../../images/001-hand-tool.png";
+import coordination from "../../images/002-jigsaw.png";
+import planing from "../../images/003-sketch.png";
+import consulting from "../../images/004-business.png";
+
+import worker from "../../images/handwerker.png";
+
 import './Home.css';
 
 const items = [
   {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
+    src: document.location.href + bathroom,
     altText: 'Slide 1',
-    caption: 'Slide 1',
-    header: 'Slide 1 Header'
+    caption: 'nach Ihren Wünschen',
+    header: 'Badezimmer'
   },
   {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
+    src: document.location.href + bathroomTwo,
     altText: 'Slide 2',
-    caption: 'Slide 2',
-    header: 'Slide 2 Header'
+    caption: 'nach Ihren Wünschen',
+    header: 'Badezimmer2'
   },
   {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
+    src: document.location.href + kitchen,
     altText: 'Slide 3',
-    caption: 'Slide 3',
-    header: 'Slide 3 Header'
+    caption: 'nach Ihren Wünschen',
+    header: 'Küche'
+  },
+  {
+    src: document.location.href + balcony,
+    altText: 'Slide 4',
+    caption: 'nach Ihren Wünschen',
+    header: 'Balkon'
   }
 ];
 
@@ -27,8 +47,87 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+
+      <div className="home">
         <UncontrolledCarousel items={items} />
+        <br/>
+        <div className="parallax">
+          <br/>
+          <br/>
+          <Col className="contentQuestion" xs="12" sm="12" md="12" lg="12">
+
+            <h4>Suchen Sie einen Fliesenleger in der Kaiserstuhlregion?</h4>
+            <p>Wir konnten bereits vielen Kunden Ihre Wünsche in Erfüllung gehen lassen und durch ein faires Preis/Leistungsverhältnis auch für den kleineren Geldbeutel erschwinglich machen.
+              <br/>
+              Unsere Fliesenleger besuchen regelmäßig Schulungen, um immer mit den neuesten Standards und Normen zu Arbeiten. Damit wir den Vorstellungen unsere Kunden gerecht werden können,
+              setzten wir auf eine qualitativ hochwertige und saubere Ausführung.
+              <br/>
+              Durch das gute Zusammenspielen unseres Teams ist eine schnelle und saubere
+              Umsetzung zu einem günstigen Preis möglich.
+            </p>
+          </Col>
+          <Col className="contentQuestionPlus" xs="12" sm="12" md="12" lg="12">
+            Gerne beraten wir Sie bei Ihnen Vor-Ort im Kaiserstühlerraum, um auch für Sie die perfekte Lösung zu finden.
+            Natürlich können Sie sich auch gerne vorab telefonisch über unsere Preise informieren.
+          </Col>
+        </div>
+        <br/>
+
+        <div className="headService">
+          <h2>Unser Service für Sie</h2>
+          <h3>Alles aus einer Hand!</h3>
+        </div>
+
+        <Row className="contentService">
+
+
+          <Col className="consulting" xs="12" sm="12" md="3" lg="3">
+            <img src={consulting} alt="consulting"/>
+            <h4>Beratung</h4>
+            <p>Vereinbaren Sie mit uns einen Termin, damit wir Sie kompetent zu Ihrem Projekt beraten können. </p>
+
+          </Col>
+
+          <Col className="planing" xs="12" sm="12" md="3" lg="3">
+            <img src={planing} alt="planing"/>
+            <h4>Planung</h4>
+            <p>Mit Ihnen zusammen planen wir Ihre neue Wohlfühloase in Ihrem Zuhause.</p>
+
+
+          </Col>
+
+          <Col className="coordination" xs="12" sm="12" md="3" lg="3">
+            <img src={coordination} alt="coordination"/>
+            <h4>Koordination</h4>
+            <p>Falls andere Gewerke für die Umsetzung benötigt werden, koordinieren wir die Arbeiten für Sie. </p>
+
+
+          </Col>
+
+          <Col className="realization" xs="12" sm="12" md="3" lg="3">
+            <img src={realization} alt="realization"/>
+            <h4>Realisierung</h4>
+            <p>Wir setzen Ihre Wünsche professionell und sauber um. </p>
+          </Col>
+        </Row>
+
+        <br/>
+        <br/>
+
+        <Col className="homeEnd" xs="12" sm="12" md="12" lg="12">
+          <h3>Ihr Fliesenleger aus Ihringen</h3>
+          <h5>Fliesen-Sexauer</h5>
+          <img src={worker} alt="worker" className="worker"/>
+          <h5>
+            "Wir von Fliesen-Sexauer machen Ihr Projekt zu
+            <br/>
+            unserem und setzen es mit voller Perfektion um."
+          </h5>
+        </Col>
+
+
+
+
       </div>
     );
   }

@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: transparent;
   height: 150px;
   padding: 20px;
   color: white;
@@ -20,6 +20,16 @@
 
 .App-intro {
   font-size: large;
+}
+
+.container {
+  background-color: transparent !important;
+  background: none;
+}
+
+#root {
+  background-color: transparent;
+  background: none;
 }
 
 @keyframes App-logo-spin {

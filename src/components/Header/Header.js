@@ -51,15 +51,15 @@ class Header extends Component {
                               </NavItem>
 
                               <NavItem>
-                                  <NavLink href="/about" data-hover="About Us"> About Us </NavLink>
+                                  <NavLink href="/about" data-hover="About Us"> Über uns </NavLink>
                               </NavItem>
 
                               <NavItem>
-                                  <NavLink href="/contact" data-hover="Contact"> Contact </NavLink>
+                                  <NavLink href="/contact" data-hover="Contact"> Kontakt </NavLink>
                               </NavItem>
 
                               <NavItem>
-                                  <NavLink href="/references" data-hover="References"> References </NavLink>
+                                  <NavLink href="/references" data-hover="References"> Referenzen </NavLink>
                               </NavItem>
 
                               <NavItem>
@@ -70,7 +70,7 @@ class Header extends Component {
                   </Navbar>
                   <Row className="header-contact">
 
-                      <Col xs="12" sm="12" md={{ size: 3, offset: 0 }} lg={{size: 2, offset:0}}>
+                      <Col xs="12" sm="12" md={{ size: 3, offset: 0 }} lg={{size: 3, offset:0}}>
                           <Icon icon={phone}/> Telefon
                           <ul>
                               <li>(07668) 996687</li>
@@ -78,7 +78,7 @@ class Header extends Component {
                           </ul>
                       </Col>
 
-                      <Col xs="12" sm="12" md="3" lg="2">
+                      <Col xs="12" sm="12" md="3" lg="3">
                           <Icon icon={location2}/> Adresse
                           <ul>
                               <li>Im Westengarten 18</li>
@@ -86,7 +86,7 @@ class Header extends Component {
                           </ul>
                       </Col>
 
-                      <Col xs="12" sm="12" md="4" lg="2">
+                      <Col xs="12" sm="12" md="4" lg="3">
                           <Icon icon={mail}/> E-Mail
                           <ul>
                               <a

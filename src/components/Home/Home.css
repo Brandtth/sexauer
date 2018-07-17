@@ -1,1 +1,51 @@
+.parallax {
+     /* The image used */
+     background-image: url('../../images/paralax2.jpg');
 
+     /* Set a specific height */
+
+
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+
+.contentQuestion {
+    color: white;
+}
+
+.contentQuestionPlus {
+    font-weight: bold;
+}
+
+.contentService {
+    background-color: white;
+}
+
+.contentQuestionPlus {
+    background-color: grey;
+    color: white;
+}
+
+.contentService {
+    text-align: center;
+}
+
+.headService {
+    text-align: center;
+}
+
+.homeEnd {
+    text-align: center;
+}
+
+.homeEnd img{
+    display: inline-block;
+}
+
+.worker {
+    max-width: 300px;
+}
