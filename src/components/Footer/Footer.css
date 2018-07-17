@@ -19,3 +19,12 @@
 .footer h4 {
     color: darkorange;
 }
+
+.mailFooter {
+    color: white;
+}
+
+.mailFooter:hover {
+    color: darkgray;
+    text-decoration: none;
+}

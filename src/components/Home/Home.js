@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { UncontrolledCarousel, Col, Row, Media } from 'reactstrap';
+import { UncontrolledCarousel, Col, Row } from 'reactstrap';
 
 
 import bathroom from "../../images/bathroom.jpeg";
@@ -79,8 +79,6 @@ class Home extends Component {
         </div>
 
         <Row className="contentService">
-
-
           <Col className="consulting" xs="12" sm="12" md="3" lg="3">
             <img src={consulting} alt="consulting"/>
             <h4>Beratung</h4>

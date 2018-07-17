@@ -6,40 +6,25 @@ import {location2} from 'react-icons-kit/icomoon/location2';
 import {phone} from 'react-icons-kit/icomoon/phone';
 import {mail} from 'react-icons-kit/icomoon/mail'
 
-import axios from 'axios';
+import {
+  withScriptjs,
+  withGoogleMap,
+  GoogleMap,
+  Marker,
+} from "react-google-maps";
+
+const MapWithAMarker = withScriptjs(withGoogleMap(props =>
+  <GoogleMap
+    defaultZoom={13}
+    defaultCenter={{ lat: 48.044936, lng: 7.641380 }}
+  >
+    <Marker
+      position={{ lat: 48.044936, lng: 7.641380 }}
+    />
+  </GoogleMap>
+));
 
 class Contact extends Component {
-  constructor (props){
-    super(props);
-
-    this.state = {
-      firstname: '',
-      lastname: '',
-      email: '',
-      message: ''
-    }
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange = e => {
-    this.setState({[e.target.name]: e.target.value})
-  }
-
-  async handleSubmit(e){
-    e.preventDefault()
-
-    const { firstname, lastname, email, message} = this.state
-
-    const form = await axios.post('/api/form', {
-      firstname,
-      lastname,
-      email,
-      message
-    })
-  }
-
 
   render() {
     return (
@@ -76,41 +61,14 @@ class Contact extends Component {
           </Col>
         </Row>
 
-        <Form onSubmit={this.handleSubmit}>
-          <FormGroup>
-            <Label for="firstname">Vorname:</Label>
-            <Input
-            type="text"
-            name="firstname"
-            onChange={this.handleChange}/>
-          </FormGroup>
+        <MapWithAMarker
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places"
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `400px` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+        />
 
-          <FormGroup>
-            <Label for="lastname">Nachname:</Label>
-            <Input
-              type="text"
-              name="lastname"
-              onChange={this.handleChange}/>
-          </FormGroup>
 
-          <FormGroup>
-            <Label for="email">E-Mail:</Label>
-            <Input
-              type="email"
-              name="email"
-              onChange={this.handleChange}/>
-          </FormGroup>
-
-          <FormGroup>
-            <Label for="message">Message:</Label>
-            <Input
-              type="textarea"
-              name="message"
-              onChange={this.handleChange}/>
-          </FormGroup>
-
-          <Button>Submit</Button>
-        </Form>
 
       </div>
     );

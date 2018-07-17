@@ -18,14 +18,7 @@ class Footer extends Component {
 
           <Row>
 
-              <Col xs="12" sm="12" md="3" lg="3">
-                <h4>About US</h4>
-                <p>Building Consensus.</p>
-                <li>Impressum</li>
-                <li>Datenschutz</li>
-              </Col>
-
-              <Col xs="12" sm="12" md="3" lg="3">
+              <Col xs="12" sm="12" md="4" lg="4">
                   <h4>Follow Us</h4>
                   <ul>
                       <li><Icon icon={facebook}/> Facebook</li>
@@ -34,7 +27,7 @@ class Footer extends Component {
                   </ul>
               </Col>
 
-            <Col xs="12" sm="12" md="3" lg="3">
+            <Col xs="12" sm="12" md="4" lg="4">
                   <h4>Rufen Sie uns jetzt an</h4>
                   <ul>
                       <li>(07667)987654321</li>
@@ -42,10 +35,16 @@ class Footer extends Component {
                   </ul>
               </Col>
 
-              <Col xs="12" sm="12" md="3" lg="3">
+              <Col xs="12" sm="12" md="4" lg="4">
                   <h4>Mail-Adresse</h4>
                   <ul>
-                      <li>info@Fliesen-Sexauer.de</li>
+                      <li>
+                        <a
+                          href="mailto:fliesen.sexauer@gmail.com?Subject=Hello%20again"
+                          target="_top" className="mailFooter">
+                          fliesen.sexauer@gmail.com
+                        </a>
+                      </li>
                   </ul>
               </Col>
           </Row>
