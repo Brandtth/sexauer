@@ -58,12 +58,12 @@ class Header extends Component {
                                   <NavLink href="/contact" data-hover="Contact"> Kontakt </NavLink>
                               </NavItem>
 
-                              <NavItem>
+                              {/*<NavItem>
                                   <NavLink href="/references" data-hover="References"> Referenzen </NavLink>
-                              </NavItem>
+                              </NavItem>*/}
 
                               <NavItem>
-                                  <NavLink href="/services" data-hover="Services"> Services </NavLink>
+                                  <NavLink href="/leistungen" data-hover="Leistungen"> Leistungen </NavLink>
                               </NavItem>
                           </Nav>
                       </Collapse>

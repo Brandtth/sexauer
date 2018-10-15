@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+.aboutContent{
+    text-align: left;
+}
+
 .worker {
     max-width: 300px;
 }

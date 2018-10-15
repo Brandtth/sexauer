@@ -11,7 +11,7 @@ class Footer extends Component {
     return (
       <div className="footer">
         <h3>
-          Sexauer
+          Thomas Sexauer
           <br/>
           Fliesen und Naturstein
         </h3>
@@ -19,12 +19,8 @@ class Footer extends Component {
           <Row>
 
               <Col xs="12" sm="12" md="4" lg="4">
-                  <h4>Follow Us</h4>
-                  <ul>
-                      <li><Icon icon={facebook}/> Facebook</li>
-                      <li><Icon icon={googlePlus3}/> Google+</li>
-                      <li><Icon icon={whatsapp}/> WhatsApp</li>
-                  </ul>
+                  <h4>Impressum</h4>
+                  Impressum(Link einfügen)
               </Col>
 
             <Col xs="12" sm="12" md="4" lg="4">

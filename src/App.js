@@ -10,7 +10,7 @@ class App extends Component {
     render() {
         return (
 
-            <Container>
+            <Container className="container-app">
                 <Header />
                 <Routes/>
                 <hr/>

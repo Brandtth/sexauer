@@ -1,32 +1,19 @@
 import React, { Component } from 'react';
 import './Contact.css';
-import { Row, Col, Form, FormGroup, Input, Label, Button } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { Icon } from 'react-icons-kit'
 import {location2} from 'react-icons-kit/icomoon/location2';
 import {phone} from 'react-icons-kit/icomoon/phone';
 import {mail} from 'react-icons-kit/icomoon/mail'
+import MapGL, { Marker } from 'react-map-gl';
 
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-} from "react-google-maps";
+import markersymbol from "../../images/gps.png";
 
-const MapWithAMarker = withScriptjs(withGoogleMap(props =>
-  <GoogleMap
-    defaultZoom={13}
-    defaultCenter={{ lat: 48.044936, lng: 7.641380 }}
-  >
-    <Marker
-      position={{ lat: 48.044936, lng: 7.641380 }}
-    />
-  </GoogleMap>
-));
 
 class Contact extends Component {
 
   render() {
+
     return (
       <div>
         <h1>Kontakt</h1>
@@ -61,13 +48,22 @@ class Contact extends Component {
           </Col>
         </Row>
 
-        <MapWithAMarker
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places"
-          loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `400px` }} />}
-          mapElement={<div style={{ height: `100%` }} />}
-        />
+        <MapGL
+          width={700}
+          height={450}
+          latitude={48.045001}
+          longitude={7.641509}
+          zoom={13}
+          mapStyle="mapbox://styles/mapbox/streets-v9"
+          mapboxApiAccessToken="pk.eyJ1IjoidGhpZXNiIiwiYSI6ImNqanI1d3N6YTBid2IzcHBlMXE1YWdzeGQifQ.cyWblHbJ0KT585aLOwb2yA"
 
+        >
+          <Marker latitude={48.045001} longitude={7.641509} offsetLeft={-20} offsetTop={-10}>
+            <div className="marker">
+              <img src={markersymbol} alt="marker"/>
+            </div>
+          </Marker>
+        </MapGL>
 
 
       </div>

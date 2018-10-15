@@ -56,19 +56,20 @@ class Home extends Component {
           <br/>
           <Col className="contentQuestion" xs="12" sm="12" md="12" lg="12">
 
+            <h3>Herzlich willkommen!</h3>
             <h4>Suchen Sie einen Fliesenleger in der Kaiserstuhlregion?</h4>
-            <p>Wir konnten bereits vielen Kunden Ihre Wünsche in Erfüllung gehen lassen und durch ein faires Preis/Leistungsverhältnis auch für den kleineren Geldbeutel erschwinglich machen.
+            <p>
+              Als Geschäftsinhaber kann ich auf eine langjährige Berufserfahrung als Fliesen-, Platten- und Mosaikleger zurückblicken.
               <br/>
-              Unsere Fliesenleger besuchen regelmäßig Schulungen, um immer mit den neuesten Standards und Normen zu Arbeiten. Damit wir den Vorstellungen unsere Kunden gerecht werden können,
-              setzten wir auf eine qualitativ hochwertige und saubere Ausführung.
+              Mein Aufgabengebiet umfasst alle Fliesen-, Naturstein-, Estricharbeiten sowie Trockenbau.
               <br/>
-              Durch das gute Zusammenspielen unseres Teams ist eine schnelle und saubere
-              Umsetzung zu einem günstigen Preis möglich.
+              Von der Kleinstreparatur über Komplettbad bis hin zu Altbausanierung oder Umbau führe ich alle Arbeiten aus.
+              <br/>
+              Wichtig ist dabei für mich eine kompetente Fachberatung, fachgerechte und präzise Ausführung aller Arbeiten sowie Kreativität, Pünktlichkeit und Sauberkeit.
             </p>
           </Col>
           <Col className="contentQuestionPlus" xs="12" sm="12" md="12" lg="12">
-            Gerne beraten wir Sie bei Ihnen Vor-Ort im Kaiserstühlerraum, um auch für Sie die perfekte Lösung zu finden.
-            Natürlich können Sie sich auch gerne vorab telefonisch über unsere Preise informieren.
+            Gerne können Sie mit uns einen Termin vereinbaren, damit wir Sie kompetent zu Ihrem Projekt beraten können.
           </Col>
         </div>
         <br/>
@@ -89,7 +90,7 @@ class Home extends Component {
           <Col className="planing" xs="12" sm="12" md="3" lg="3">
             <img src={planing} alt="planing"/>
             <h4>Planung</h4>
-            <p>Mit Ihnen zusammen planen wir Ihre neue Wohlfühloase in Ihrem Zuhause.</p>
+            <p>Mit Ihnen zusammen planen wir Ihr Bauvorhaben.</p>
 
 
           </Col>
@@ -97,7 +98,7 @@ class Home extends Component {
           <Col className="coordination" xs="12" sm="12" md="3" lg="3">
             <img src={coordination} alt="coordination"/>
             <h4>Koordination</h4>
-            <p>Falls andere Gewerke für die Umsetzung benötigt werden, koordinieren wir die Arbeiten für Sie. </p>
+            <p>Falls andere Gewerke für die Umsetzung benötigt werden, organisieren und koordinieren wir die Zusammenarbeit mit anderen Firmen.</p>
 
 
           </Col>
@@ -105,7 +106,7 @@ class Home extends Component {
           <Col className="realization" xs="12" sm="12" md="3" lg="3">
             <img src={realization} alt="realization"/>
             <h4>Realisierung</h4>
-            <p>Wir setzen Ihre Wünsche professionell und sauber um. </p>
+            <p>Wir setzen Ihre Wünsche nach gemeinsamer Planung fachgerecht und sauber um. </p>
           </Col>
         </Row>
 
@@ -114,18 +115,9 @@ class Home extends Component {
 
         <Col className="homeEnd" xs="12" sm="12" md="12" lg="12">
           <h3>Ihr Fliesenleger aus Ihringen</h3>
-          <h5>Fliesen-Sexauer</h5>
+          <h5>Thomas Sexauer </h5>
           <img src={worker} alt="worker" className="worker"/>
-          <h5>
-            "Wir von Fliesen-Sexauer machen Ihr Projekt zu
-            <br/>
-            unserem und setzen es mit voller Perfektion um."
-          </h5>
         </Col>
-
-
-
-
       </div>
     );
   }
